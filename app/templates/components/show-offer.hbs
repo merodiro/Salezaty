@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <div class="row">
-          <img class="col-md-10 col-md-offset-1" src="{{offer.images}}" alt="...">
+          <img class="img-responsive col-md-10 col-md-offset-1" src="{{offer.images}}" alt="...">
           <hr>
           <div class="col-md-10 col-md-offset-1">
             <blockquote>
@@ -15,7 +15,9 @@
                 {{offer.description}}
               </p>
             </blockquote>
-            {{offer.user.username}}
+            <p class="text-primary">
+              {{offer.user.username}}
+            </p>
           </div>
         </div>
       </div>
