@@ -14,17 +14,10 @@ export default Ember.Component.extend({
           });
            store.findRecord('user', "-KPpVaSv2LXJTP_ZO1M4").then(function(user) {
                offer.set('user', user);
-               offer.save();
-
-              // user.get('offers').addObject(this.store.createRecord('offer', {
-              //   name: this.get('name'),
-              //   description: this.get('description'),
-              //   price: this.get('price'),
-              //   discount: this.get('discount'),
-              //   images: this.get('images')
-              // }));
-              // user.save();
-            });
+               offer.save().then(function() {
+                 return user.save();
+               });
+             });
           }
         }
       });

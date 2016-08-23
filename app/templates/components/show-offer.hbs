@@ -1,5 +1,5 @@
 <div class="modal fade" id="show{{offer.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <div class="row">
-          <img class="img-responsive col-md-10 col-md-offset-1" src="{{offer.images}}" alt="...">
+          <img class="img-fluid col-md-10 col-md-offset-1" src="{{offer.images}}" alt="...">
           <hr>
           <div class="col-md-10 col-md-offset-1">
             <blockquote>
@@ -16,13 +16,13 @@
               </p>
             </blockquote>
             <p class="text-primary">
-              {{offer.user.username}}
+              {{offer.user.id}}
             </p>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i> Edit</button>
+        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#new" class="btn btn-primary"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i> Edit</button>
       </div>
     </div>
   </div>
