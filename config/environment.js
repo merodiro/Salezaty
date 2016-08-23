@@ -2,6 +2,12 @@
 
 module.exports = function(environment) {
   var ENV = {
+    firebase: {
+      apiKey: "AIzaSyB7Mc0dn4atKviHl55C_yvr4VrDqGirCYU",
+      authDomain: "salezaty-96c39.firebaseapp.com",
+      databaseURL: "https://salezaty-96c39.firebaseio.com",
+      storageBucket: "salezaty-96c39.appspot.com",
+    },
     modulePrefix: 'front-end',
     environment: environment,
     rootURL: '/',

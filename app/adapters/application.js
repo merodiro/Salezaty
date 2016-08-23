@@ -1,6 +1,4 @@
-import DS from 'ember-data';
+import FirebaseAdapter from 'emberfire/adapters/firebase';
 
-// app/adapters/application.js
-export default DS.JSONAPIAdapter.extend({
-  host: 'https://salezaty-api.herokuapp.com'
+export default FirebaseAdapter.extend({
 });

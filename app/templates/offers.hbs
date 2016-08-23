@@ -1,3 +1,5 @@
+<button type="button" data-toggle="modal" data-target="#new" class="btn btn-primary">New</button>
+<hr>
 <div class="row">
   {{#each model as |offer|}}
     <div class="col-sm-6 col-md-4 col-md-3">
@@ -17,3 +19,4 @@
     </div>
       {{/each}}
 </div>
+{{new-offer store=store }}
