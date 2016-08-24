@@ -8,6 +8,9 @@ module.exports = function(environment) {
       databaseURL: "https://salezaty-96c39.firebaseio.com",
       storageBucket: "salezaty-96c39.appspot.com",
     },
+    torii: {
+      sessionServiceName: 'session'
+    },
     modulePrefix: 'front-end',
     environment: environment,
     rootURL: '/',

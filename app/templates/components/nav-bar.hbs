@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-primary navbar-fixed-top">
   <div class="navbar-header">
-     <a class="navbar-brand" href="#">Salezaty</a>
+    <a class="navbar-brand" href="#">Salezaty</a>
   </div>
   <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
     &#9776;
@@ -20,6 +20,18 @@
         <a class="nav-link" href="#">About</a>
       </li>
     </ul>
-    <button class="pull-xs-right btn btn-success" type="button">Login</button>
+
+
+    {{#if session.isAuthenticated}}
+      <p class="pull-sm-right">
+        {{session.currentUser.email}}
+      </p>
+      <button class="pull-xs-right btn btn-danger" {{action 'confirmSignOut'}}>
+        {{fa-icon 'sign-out'}} Sign Out
+      </button>
+    {{else}}
+      <a href="#" data-toggle="modal" data-target="#sign-up" class="pull-sm-right btn btn-success navbar-btn" role="button">Sign up</a>
+      <a href="#" data-toggle="modal" data-target="#sign-in" class="pull-sm-right btn btn-success navbar-btn" role="button">Login</a>
+    {{/if}}
   </div>
 </nav>

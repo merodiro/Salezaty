@@ -1,4 +1,6 @@
-{{nav-bar}}
+{{nav-bar session=session onConfirm=(action "signOut")}}
 <div class="container">
   {{outlet}}
 </div><!-- /.container -->
+{{sign-in session=session}}
+{{sign-up}}

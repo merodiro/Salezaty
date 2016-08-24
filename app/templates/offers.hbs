@@ -11,8 +11,8 @@
         <div class="card-block">
           <p class="card-text">{{offer.user.username}}</p>
           <p class="card-text"><small class="text-muted">{{offer.price}} $</small></p>
-          <a data-toggle="modal" data-target="#delete{{offer.id}}" class="btn btn-danger" role="button"><span class="glyphicons glyphicons-bin"></span> Delete</a>
-          <a href="#" data-toggle="modal" data-target="#show{{offer.id}}" class="btn btn-secondary" role="button">Show</a>
+          <a data-toggle="modal" data-target="#delete{{offer.id}}" class="btn btn-danger-outline" role="button"><span class="glyphicons glyphicons-bin"></span> Delete</a>
+          <a href="#" data-toggle="modal" data-target="#show{{offer.id}}" class="btn btn-info-outline" role="button">Show</a>
           {{delete-offer offer=offer}}
           {{show-offer offer=offer}}
           {{edit-offer offer=offer}}
