@@ -8,24 +8,25 @@
       <form>
         <div class="modal-body">
           <div class="form-group">
-            <label for="offer-name">Product name</label>
-            {{input type="text" class="form-control" id="offer-name" placeholder="Please enter product name" value=offer.name}}
+            <label>Product name</label>
+            {{!-- <input type="text" placeholder="Please enter product name" id="offer-name{{offer.id}}" value="{{offer.name}}"> --}}
+            {{input type="text" class="form-control" placeholder="Please enter product name" value=offer.name}}
           </div>
           <div class="form-group">
-            <label for="offer-description">Description</label>
-            {{input type="text" class="form-control" id="offer-description" placeholder="Please enter description" value=offer.description}}
+            <label>Description</label>
+            {{input type="text" class="form-control" placeholder="Please enter description" value=offer.description}}
           </div>
           <div class="form-group">
-            <label for="offer-price">price</label>
-            {{input type="number" class="form-control" id="offer-price" placeholder="Please enter price" value=offer.price}}
+            <label>price</label>
+            {{input type="number" class="form-control" placeholder="Please enter price" value=offer.price}}
           </div>
           <div class="form-group">
-            <label for="offer-discount">Discount</label>
-            {{input type="Number" class="form-control" id="offer-discount" placeholder="Please enter discount amount" value=offer.discount}}
+            <label>Discount</label>
+            {{input type="Number" class="form-control" placeholder="Please enter discount amount" value=offer.discount}}
           </div>
           <div class="form-group">
-            <label for="offer-image">Image</label>
-            {{input type="Text" class="form-control" id="offer-image" placeholder="Please enter image url" value=offer.image}}
+            <label>Image</label>
+            {{input type="Text" class="form-control" placeholder="Please enter image url" value=offer.image}}
           </div>
           {{!-- <div class="form-group">
             <label for="product-user">user</label>
@@ -38,7 +39,7 @@
           </div> --}}
         </div>
         <div class="modal-footer">
-          <button type="submit" {{action "edit" offer.id}} class="btn btn-primary">Submit</button>
+          <button type="submit" data-dismiss="modal" {{action "edit" offer.id}} class="btn btn-primary">Submit</button>
         </div>
       </form>
     </div>
