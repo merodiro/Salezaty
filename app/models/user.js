@@ -6,5 +6,5 @@ export default DS.Model.extend({
   email: DS.attr('string'),
   address: DS.attr('string'),
   phone: DS.attr('string'),
-  offers: DS.hasMany('offer', { async: true })
+  offers: DS.hasMany('offer', { async: false })
 });

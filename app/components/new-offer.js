@@ -10,7 +10,7 @@ export default Ember.Component.extend({
             description: this.get('description'),
             price: this.get('price'),
             discount: this.get('discount'),
-            images: this.get('images')
+            image: this.get('image')
           });
            store.findRecord('user', "-KPpVaSv2LXJTP_ZO1M4").then(function(user) {
                offer.set('user', user);

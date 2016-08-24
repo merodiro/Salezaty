@@ -5,6 +5,6 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   price: DS.attr('number'),
   discount: DS.attr('number'),
-  images: DS.attr('string'),
+  image: DS.attr('string'),
   user: DS.belongsTo('user')
 });
