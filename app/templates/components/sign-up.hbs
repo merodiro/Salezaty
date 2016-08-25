@@ -7,17 +7,29 @@
       </div>
       <form>
         <div class="modal-body">
-          <div class="form-group">
-            <label for="sign-up-email">Email address</label>
-            {{input type='email' class='form-control'id="sign-up-email" placeholder="Enter email" value=email }}
+          <div class="form-group row">
+            <label for="sign-up-email" class="control-label col-sm-3">Email address</label>
+            <div class="col-sm-9">
+              {{input type='email' class='form-control'id="sign-up-email" placeholder="Enter email" value=email }}
+            </div>
           </div>
-          <div class="form-group">
-            <label for="sign-up-password">Password</label>
-            {{input type='password' class='form-control' id="sign-up-password" value=password placeholder='password' }}
+          <div class="form-group row">
+            <label for="sign-up-password" class="col-sm-3">Password</label>
+            <div class="col-sm-9">
+              {{input type='password' class='form-control' id="sign-up-password" value=password placeholder='password' }}
+            </div>
           </div>
-          <div class="form-group">
-            <label for="sign-up-username">User name</label>
-            {{input type='text' class='form-control'id="sign-up-username" placeholder="Enter User name" value=username }}
+          <div class="form-group row">
+            <label for="sign-up-username" class="col-sm-3">User name</label>
+            <div class="col-sm-9">
+              {{input type='text' class='form-control' id="sign-up-username" placeholder="Enter User name" value=username }}
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="sign-up-image" class="col-sm-3">User name</label>
+            <div class="col-sm-9">
+              {{input type='url' class='form-control' id="sign-up-image" placeholder="Enter your image url" value=image }}
+            </div>
           </div>
         </div>
         <div class="modal-footer">

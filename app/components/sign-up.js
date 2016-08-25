@@ -16,6 +16,7 @@ export default Ember.Component.extend({
           id: userResponse.uid,
           email: userResponse.email,
           username: this.get('username'),
+          image: this.get('image'),
         });
         return user.save();
       });

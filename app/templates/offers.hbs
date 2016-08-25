@@ -3,12 +3,14 @@
 <div class="row">
   {{#each model as |offer|}}
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <div class="thumbnail">
-          <h4 class="text-center">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <h3 class="panel-title">
             {{offer.name}}
             <label class="pull-right label label-danger"> -{{offer.discount}} %</label>
-          </h4>
-        <div class="caption">
+          </h3>
+        </div>
+        <div class="panel-body">
           <img class="img-responsive" src="{{offer.image}}">
           <div class="row">
             <h5 class="col-sm-6">
@@ -18,7 +20,6 @@
             </h5>
             <h5 class="text-muted col-sm-4 col-sm-offset-2">{{offer.price}} $</h5>
           </div>
-
           <a data-toggle="modal" data-target="#delete{{offer.id}}" class="btn btn-danger" role="button">{{fa-icon 'fa-trash-o'}} Delete</a>
           <a href="#" data-toggle="modal" data-target="#show{{offer.id}}" class="pull-right btn btn-info" role="button">{{fa-icon 'fa-eye'}} Show</a>
         </div>
