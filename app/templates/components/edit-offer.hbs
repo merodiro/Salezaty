@@ -7,41 +7,48 @@
       </div>
       <form>
         <div class="modal-body">
-          <div class="form-group">
-            <label>Product name</label>
-            {{!-- <input type="text" placeholder="Please enter product name" id="offer-name{{offer.id}}" value="{{offer.name}}"> --}}
-            {{input type="text" class="form-control" placeholder="Please enter product name" value=offer.name}}
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Product name</label>
+            <div class="col-sm-9">
+              {{input type="text" class="form-control" placeholder="Please enter product name" value=offer.name}}
+            </div>
           </div>
-          <div class="form-group">
-            <label>Description</label>
-            {{input type="text" class="form-control" placeholder="Please enter description" value=offer.description}}
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">price</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <span class="input-group-addon">$</span>
+                {{input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Please enter price" value=offer.price}}
+                <span class="input-group-addon">.00</span>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label>price</label>
-            {{input type="number" class="form-control" placeholder="Please enter price" value=offer.price}}
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Discount</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <span class="input-group-addon">%</span>
+                {{input type="number" class="form-control" aria-label="percentage" placeholder="Please enter discount amount" value=offer.discount}}
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label>Discount</label>
-            {{input type="Number" class="form-control" placeholder="Please enter discount amount" value=offer.discount}}
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Image</label>
+            <div class="col-sm-9">
+              {{input type="url" class="form-control" placeholder="Please enter image url" value=offer.image}}
+            </div>
           </div>
-          <div class="form-group">
-            <label>Image</label>
-            {{input type="Text" class="form-control" placeholder="Please enter image url" value=offer.image}}
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Description</label>
+            <div class="col-sm-9">
+              {{textarea class="form-control" rows="4" placeholder="Please enter description" value=offer.description}}
+            </div>
           </div>
-          {{!-- <div class="form-group">
-            <label for="product-user">user</label>
-            {{input type="Text" class="form-control" id="product-user" placeholder="Please enter username" value=model.user.username}}
-          </div> --}}
-          {{!-- <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile" disabled>
-            <p class="help-block">Example block-level help text here.</p>
-          </div> --}}
-        </div>
-        <div class="modal-footer">
-          <button type="submit" data-dismiss="modal" {{action "edit" offer.id}} class="btn btn-primary">Submit</button>
-        </div>
-      </form>
     </div>
+    <div class="modal-footer">
+      <button type="submit" data-dismiss="modal" {{action "edit" offer.id}} class="btn btn-primary">Submit</button>
+    </div>
+    </form>
   </div>
+</div>
 </div>

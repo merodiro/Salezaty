@@ -15,14 +15,12 @@
                 {{offer.description}}
               </p>
             </blockquote>
-            <p class="text-primary">
-              {{offer.user.username}}
-            </p>
+            <span class="tag tag-primary">{{offer.user.username}}</span>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#edit{{offer.id}}" class="btn btn-primary"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i> Edit</button>
+        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#edit{{offer.id}}" class="btn btn-primary">{{fa-icon 'fa-pencil-square-o'}} Edit</button>
       </div>
     </div>
   </div>

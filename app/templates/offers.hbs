@@ -3,20 +3,26 @@
 <div class="row">
   {{#each model as |offer|}}
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <div class="card">
-        <h4 class="card-header text-center">
-          {{offer.name}}
-        </h4>
-        <img class="card-img-top img-fluid" src="{{offer.image}}">
-        <div class="card-block">
-          <p class="card-text">{{offer.user.username}}</p>
-          <p class="card-text"><small class="text-muted">{{offer.price}} $</small></p>
-          <a data-toggle="modal" data-target="#delete{{offer.id}}" class="btn btn-danger-outline" role="button"><span class="glyphicons glyphicons-bin"></span> Delete</a>
-          <a href="#" data-toggle="modal" data-target="#show{{offer.id}}" class="btn btn-info-outline" role="button">Show</a>
-          {{delete-offer offer=offer}}
-          {{show-offer offer=offer}}
-          {{edit-offer offer=offer}}
+      <div class="thumbnail">
+          <h4 class="text-center">
+            {{offer.name}}
+            <label class="pull-right label label-danger"> -{{offer.discount}} %</label>
+          </h4>
+        <div class="caption">
+          <img class="img-responsive" src="{{offer.image}}">
+          <div class="row">
+            <h5 class="col-sm-6">
+              <label class="label label-default">
+                {{offer.user.username}}
+              </label>
+            </h5>
+            <h5 class="text-muted col-sm-4 col-sm-offset-2">{{offer.price}} $</h5>
+          </div>
+
+          <a data-toggle="modal" data-target="#delete{{offer.id}}" class="btn btn-danger" role="button">{{fa-icon 'fa-trash-o'}} Delete</a>
+          <a href="#" data-toggle="modal" data-target="#show{{offer.id}}" class="pull-right btn btn-info" role="button">{{fa-icon 'fa-eye'}} Show</a>
         </div>
+        {{delete-offer offer=offer}} {{show-offer offer=offer}} {{edit-offer offer=offer}}
       </div>
     </div>
   {{/each}}

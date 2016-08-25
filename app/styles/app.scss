@@ -1,4 +1,4 @@
-@import 'bootstrap';
+@import 'custom';
 body {
 	padding-top: 90px;
 }
@@ -20,8 +20,9 @@ body {
 	color: white;
 	padding: 5px;
 }
-.navbar-btn {
-	margin-right: 5px;
+#login-btn {
+	margin-left: 10px;
+	margin-right: 3px;
 }
 .navbar-toggler {
 	color: white;
