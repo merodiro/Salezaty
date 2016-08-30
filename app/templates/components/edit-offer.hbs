@@ -17,8 +17,7 @@
             <label class="col-sm-3 col-form-label">price</label>
             <div class="col-sm-9">
               <div class="input-group">
-                <span class="input-group-addon">$</span>
-                {{input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Please enter price" value=offer.price}}
+                <span class="input-group-addon">$</span> {{input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Please enter price" value=offer.price}}
                 <span class="input-group-addon">.00</span>
               </div>
             </div>
@@ -27,8 +26,7 @@
             <label class="col-sm-3 col-form-label">Discount</label>
             <div class="col-sm-9">
               <div class="input-group">
-                <span class="input-group-addon">%</span>
-                {{input type="number" class="form-control" aria-label="percentage" placeholder="Please enter discount amount" value=offer.discount}}
+                <span class="input-group-addon">%</span> {{input type="number" class="form-control" aria-label="percentage" placeholder="Please enter discount amount" value=offer.discount}}
               </div>
             </div>
           </div>
@@ -44,11 +42,11 @@
               {{textarea class="form-control" rows="4" placeholder="Please enter description" value=offer.description}}
             </div>
           </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" data-dismiss="modal" {{action "edit" offer.id}} class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
-    <div class="modal-footer">
-      <button type="submit" data-dismiss="modal" {{action "edit" offer.id}} class="btn btn-primary">Submit</button>
-    </div>
-    </form>
   </div>
-</div>
 </div>

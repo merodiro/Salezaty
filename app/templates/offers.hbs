@@ -2,7 +2,7 @@
 <hr>
 <div class="row">
   {{#each model as |offer|}}
-    <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
       <div class="panel panel-primary">
         <div class="panel-heading text-center">
           <h3 class="panel-title">
@@ -23,7 +23,9 @@
           <a data-toggle="modal" data-target="#delete{{offer.id}}" class="btn btn-danger" role="button">{{fa-icon 'fa-trash-o'}} Delete</a>
           <a href="#" data-toggle="modal" data-target="#show{{offer.id}}" class="pull-right btn btn-info" role="button">{{fa-icon 'fa-eye'}} Show</a>
         </div>
-        {{delete-offer offer=offer}} {{show-offer offer=offer}} {{edit-offer offer=offer}}
+        {{delete-offer offer=offer}}
+        {{show-offer offer=offer}}
+        {{edit-offer offer=offer}}
       </div>
     </div>
   {{/each}}
